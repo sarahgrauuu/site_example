@@ -1,0 +1,152 @@
+body {
+  background-color: black;
+}
+
+.mainNavig h1 {
+  width: 100px;
+  height: 150px;
+  font-display: center;
+  font-family: zeitung, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: beige;
+  font-size: 70px;
+  margin-left: 70px;
+}
+
+.letterLinks ol {
+  margin-left: 30px;
+  margin-top: 1rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.brandList ol {
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.brandList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+}
+.brandList a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-family: white;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.letterGroup a {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1px 5px;
+  grid-auto-flow: column dense;
+  grid-template-areas:
+    "en to"
+    ". .";
+}
+
+.en {
+  grid-area: en;
+  padding-top: 200px;
+}
+
+.en h2 {
+  color: white;
+  font-family: Helvetica;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.container_info {
+  color: white;
+  font-family: Helvetica;
+  font-size: 50px;
+  text-align: center;
+}
+
+.to {
+  grid-area: to;
+}
+
+.to button {
+  background-color: white;
+}
+
+.productlist main {
+  margin-left: 30px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 2rem;
+  font-family: helvetica;
+}
+.productlist main h2 {
+  grid-column: 1/-1;
+}
+.productlist article h3 {
+  font-size: 1rem;
+  flex-grow: 3;
+}
+.productlist article > * {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.subtle {
+  color: #d8d8d8cc;
+  font-size: 20px;
+}
+.productlist article {
+  display: flex;
+  flex-direction: column;
+}
+
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background: white;
+  color: black;
+  padding: 1rem;
+}
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+  color: white;
+  font-size: 20px;
+}
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.productlist article.onSale .price span {
+  font-size: 20px;
+  color: white;
+  display: initial;
+}
+
+.productlist article {
+  color: white;
+  margin-bottom: 3rem;
+  font-size: 20px;
+}
